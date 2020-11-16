@@ -27,12 +27,12 @@
 # THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 cmake_minimum_required(VERSION 2.8.7)
-project(monero-crypto)
+project(scala-crypto)
 enable_language(ASM C)
 include(intree.cmake)
 
-add_library(monero-crypto $<TARGET_OBJECTS:monero-crypto-intree>)
+add_library(scala-crypto $<TARGET_OBJECTS:scala-crypto-intree>)
 
-INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/monero/crypto/${MONERO_CRYPTO_LIBRARY}.h" DESTINATION "include/monero/crypto")
-INSTALL(FILES "${CMAKE_BINARY_DIR}/include/monero/crypto.h" DESTINATION "include/monero")
-INSTALL(TARGETS monero-crypto LIBRARY)
+INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/scala/crypto/${SCALA_CRYPTO_LIBRARY}.h" DESTINATION "include/scala/crypto")
+INSTALL(FILES "${CMAKE_BINARY_DIR}/include/scala/crypto.h" DESTINATION "include/scala")
+INSTALL(TARGETS scala-crypto LIBRARY)
